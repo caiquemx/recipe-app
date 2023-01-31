@@ -7,6 +7,13 @@ export const getCategories = async () => {
   return data;
 };
 
+export const getAreas = async () => {
+  const ENDPOINT = 'www.themealdb.com/api/json/v1/1/list.php?a=list';
+  const response = axios.get(ENDPOINT);
+  const data = response.json();
+  return data;
+};
+
 export const getMealByName = async (name) => {
   const ENDPOINT = `www.themealdb.com/api/json/v1/1/search.php?s=${name}`;
   const response = axios.get(ENDPOINT);
@@ -21,8 +28,8 @@ export const getMealDetailsById = async (id) => {
   return data;
 };
 
-export const getAreas = async () => {
-  const ENDPOINT = 'www.themealdb.com/api/json/v1/1/list.php?a=list';
+export const getMealByCategories = async (category) => {
+  const ENDPOINT = `www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
   const response = axios.get(ENDPOINT);
   const data = response.json();
   return data;
