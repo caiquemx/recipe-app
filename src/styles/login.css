@@ -1,0 +1,24 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+#email {
+  height: 30px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+#password {
+  height: 30px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.login-button {
+  min-width: 50%;
+}
