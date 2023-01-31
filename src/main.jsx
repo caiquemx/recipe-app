@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {MealProvider} from './context/';
 import Routes from './routes';
 import App from './App';
-import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Routes>
-      <App />
+      <MealProvider>
+        <App />
+      </MealProvider>
     </Routes>
   </React.StrictMode>
 );
