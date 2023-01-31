@@ -13,3 +13,10 @@ export const getMealByName = async (name) => {
   const data = response.json();
   return data;
 };
+
+export const getMealDetailsById = async (id) => {
+  const ENDPOINT = `www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+  const response = axios.get(ENDPOINT);
+  const data = response.json();
+  return data;
+};
