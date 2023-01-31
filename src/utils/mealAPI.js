@@ -28,8 +28,15 @@ export const getMealDetailsById = async (id) => {
   return data;
 };
 
-export const getMealByCategories = async (category) => {
+export const getMealByCategory = async (category) => {
   const ENDPOINT = `www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+  const response = axios.get(ENDPOINT);
+  const data = response.json();
+  return data;
+};
+
+export const getMealByArea = async (area) => {
+  const ENDPOINT = `www.themealdb.com/api/json/v1/1/filter.php?a=${area}`;
   const response = axios.get(ENDPOINT);
   const data = response.json();
   return data;
