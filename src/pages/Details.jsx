@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router';
 import {getMealDetailsById} from '../utils/mealAPI';
+import DetailsCard from '../components/DetailsCard';
+import '../styles/details.css';
 
 export default function Details() {
   const {id} = useParams();
@@ -14,13 +16,9 @@ export default function Details() {
     fetch();
   }, []);
 
-  const ingredientKeys = Object.keys(meal).filter((e) => e.includes('strIngredient'));
-  const ingredients = ingredientKeys
-    .map((k) => {
-      return meal[k];
-    })
-    .filter((e) => !!e);
-  console.log(ingredients);
-
-  return <div>Details</div>;
+  return (
+    <div>
+      <DetailsCard meal={meal} />
+    </div>
+  );
 }

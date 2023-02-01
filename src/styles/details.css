@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.details-container {
+  align-items: center;
+  display: grid;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: left;
+  margin: 0 auto;
+  row-gap: 15px;
+  width: 100%;
+}
+
+.title-section,
+.ingredient-section,
+.instructions-section {
+  display: grid;
+  text-align: left;
+  max-width: 100%;
+}
+
+.img-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.ingredient-section,
+.instructions-section {
+  background-color: #f1f1f1;
+}
+
+.buttons-container {
+  grid-row: 1;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.meal-title,
+.ingredient-title,
+.instructions-title,
+.video-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+.meal-category {
+  align-self: flex-start;
+  color: grey;
+  font-size: 1em;
+  margin: 0;
+}
+
+/* .ingredient-title {
+  text-align: left;
+  font-style: italic;
+  width: 200px;
+} */
+
+.video-section {
+  width: 100%;
+}
+
+.video-section iframe {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+  height: 400px;
+}
