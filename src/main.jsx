@@ -6,10 +6,10 @@ import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Routes>
-      <MealProvider>
+    <MealProvider>
+      <Routes>
         <App />
-      </MealProvider>
-    </Routes>
+      </Routes>
+    </MealProvider>
   </React.StrictMode>
 );

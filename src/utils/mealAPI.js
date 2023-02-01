@@ -12,7 +12,7 @@ export const getAreas = async () => {
   return data;
 };
 
-export const getMealByName = async (name) => {
+export const getMealByName = async (name = '') => {
   const ENDPOINT = `http://www.themealdb.com/api/json/v1/1/search.php?s=${name}`;
   const {data} = await axios.get(ENDPOINT);
   return data;
