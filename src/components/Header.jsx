@@ -1,18 +1,21 @@
 import React from 'react';
+import '../styles/header.css';
 
 export default function Header() {
   return (
-    <div>
+    <header className="header">
       <img
-        src=""
         alt="profile-avatar"
+        className="avatar-picture"
+        src=""
       />
-      <h1></h1>
+      <h1 className="page-title">TITLE</h1>
       <input
-        type="text"
-        name="search"
+        className="search-input"
         id="search"
+        name="search"
+        type="text"
       />
-    </div>
+    </header>
   );
 }

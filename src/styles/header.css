@@ -1,0 +1,34 @@
+.header {
+  align-items: center;
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 75px;
+  height: 75px;
+  justify-content: center;
+  margin: 0 5px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.avatar-picture {
+  display: grid;
+  position: relative;
+  left: 0;
+  grid-column: 1;
+  width: 100%;
+}
+
+.page-title {
+  display: grid;
+  grid-column: 2;
+}
+
+.search-input {
+  display: grid;
+  grid-column: 3;
+  justify-self: flex-start;
+  margin: 0;
+  width: 70%;
+}
