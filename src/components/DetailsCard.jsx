@@ -29,7 +29,7 @@ export default function DetailsCard({meal}) {
         <h4 className="ingredient-title">INGREDIENTS</h4>
         <ul className="ingredient-list">
           {ingredients.map((i, index) => (
-            <li>{`${i} - ${measures[index]}`}</li>
+            <li key={i + index}>{`${i} - ${measures[index]}`}</li>
           ))}
         </ul>
       </section>
