@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate, generatePath} from 'react-router';
+import {useNavigate} from 'react-router';
 import '../styles/meal.css';
 
 export default function MealCard({meals}) {
@@ -12,13 +12,13 @@ export default function MealCard({meals}) {
   return (
     <div
       className="card-container"
-      onClick={() => handleCardClick(meals.idMeal)}
+      onClick={() => handleCardClick(meals.id)}
     >
       <img
-        src={`${meals.strMealThumb}/preview`}
-        alt={`Image of ${meals.strMeal}`}
+        src={`${meals.thumb}/preview`}
+        alt={`Image of ${meals.name}`}
       />
-      <p>{meals.strMeal}</p>
+      <p>{meals.name}</p>
     </div>
   );
 }

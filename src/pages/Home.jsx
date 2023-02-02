@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useContext} from 'react';
 import {mealContext} from '../context';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
@@ -6,23 +6,17 @@ import MealCard from '../components/MealCard';
 import '../styles/home.css';
 
 export default function Home() {
-  const {categories, meals, functions, isLoading, setIsLoading} = useContext(mealContext);
+  const {categories, meals, functions} = useContext(mealContext);
 
   const handleCategoryClick = async (category) => {
-    try {
-      setIsLoading(true);
-      await functions.categoryFilter(category);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error.message);
-    }
+    await functions.categoryFilter(category);
   };
 
   return (
     <>
       <Header />
       <div className="home-container">
-        {!isLoading ? (
+        {meals && categories ? (
           <>
             <section className="categories">
               <div className="categories-container">
@@ -42,7 +36,7 @@ export default function Home() {
               <div className="meal-container">
                 {meals?.map((e) => (
                   <MealCard
-                    key={e.strMeal}
+                    key={e.name}
                     meals={e}
                   />
                 ))}
