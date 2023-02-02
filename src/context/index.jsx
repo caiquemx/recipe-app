@@ -26,7 +26,8 @@ export const MealProvider = ({children}) => {
 
   const categoryFilter = async (category) => {
     const {meals} = await getMealByCategory(category);
-    setMeals(meals);
+    const serializer = serialize(meals);
+    setMeals(serializer);
   };
 
   const getMealById = async (id) => {
