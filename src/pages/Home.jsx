@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header pageTitle={'HOME'} />
       <div className="home-container">
         {meals && categories ? (
           <>
