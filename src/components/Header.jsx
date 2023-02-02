@@ -2,9 +2,9 @@ import React, {useContext} from 'react';
 import '../styles/header.css';
 import {mealContext} from '../context';
 
-export default function Header(pageTitle) {
+export default function Header({pageTitle}) {
   const {data} = useContext(mealContext);
-  console.log(data);
+
   return (
     <header className="header">
       <img
@@ -12,7 +12,7 @@ export default function Header(pageTitle) {
         className="avatar-picture"
         src={`https://www.gravatar.com/avatar/${data.email}`}
       />
-      <h1 className="page-title">{!pageTitle || 'TITLE'}</h1>
+      <h1 className="page-title">{pageTitle || 'TITLE'}</h1>
       <input
         className="search-input"
         id="search"
