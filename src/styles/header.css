@@ -1,9 +1,11 @@
 .header {
   align-items: center;
   background-color: aquamarine;
+  border-radius: 37.5px;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 75px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   height: 75px;
   justify-content: center;
   margin: 0 5px;
@@ -13,11 +15,12 @@
 }
 
 .avatar-picture {
+  border-radius: 50%;
   display: grid;
-  position: relative;
   left: 0;
   grid-column: 1;
-  width: 100%;
+  position: relative;
+  width: 75px;
 }
 
 .page-title {
