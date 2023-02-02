@@ -24,10 +24,17 @@ export const MealProvider = ({children}) => {
     setMeals(meals);
   };
 
+  const getUserData = () => {
+    const {user} = {...localStorage};
+    const data = JSON.parse(user);
+    return data;
+  };
+
   const value = {
     isLoading,
     setIsLoading,
     categories,
+    data: getUserData(),
     meals,
     functions: {categoryFilter},
   };

@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../styles/header.css';
+import {mealContext} from '../context';
 
-export default function Header() {
+export default function Header(pageTitle) {
+  const {data} = useContext(mealContext);
+  console.log(data);
   return (
     <header className="header">
       <img
         alt="profile-avatar"
         className="avatar-picture"
-        src=""
+        src={`https://www.gravatar.com/avatar/${data.email}`}
       />
-      <h1 className="page-title">TITLE</h1>
+      <h1 className="page-title">{!pageTitle || 'TITLE'}</h1>
       <input
         className="search-input"
         id="search"

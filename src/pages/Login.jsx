@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import gravatarImg from '../utils/gravatarHash';
+
 import '../styles/login.css';
 
 export default function Login() {
@@ -20,7 +22,17 @@ export default function Login() {
   };
 
   const handleSubmitClick = (e) => {
+    // dataToLocalStorage(loginData.email);
     navigate('/home');
+  };
+
+  const dataToLocalStorage = (email) => {
+    const gravatar = gravatarImg(email);
+    const data = {
+      email,
+      gravatar,
+    };
+    localStorage.setItem('user', JSON.stringify(data));
   };
 
   //validate email and password rules;
@@ -41,38 +53,42 @@ export default function Login() {
 
   return (
     <main>
-      <h1 className="app-title">RECIPES APP</h1>
-      <form
-        action="submit"
-        className="form-container"
-      >
-        <input
-          autoComplete="off"
-          id="email"
-          name="email"
-          onChange={({target}) => handleChange(target)}
-          placeholder="Email"
-          type="email"
-          value={loginData.email}
-        />
-        <input
-          autoComplete="off"
-          id="password"
-          name="password"
-          onChange={({target}) => handleChange(target)}
-          placeholder="Password"
-          type="password"
-          value={loginData.password}
-        />
-        <button
-          className="login-button"
-          disabled={isDisable}
-          onClick={handleSubmitClick}
-          type="submit"
+      <div className="form-container">
+        <form
+          action="submit"
+          className="form"
         >
-          LOGIN
-        </button>
-      </form>
+          <h1 className="app-title">RECIPES APP</h1>
+          <input
+            autoComplete="off"
+            className="email-input"
+            id="email"
+            name="email"
+            onChange={({target}) => handleChange(target)}
+            placeholder="Email"
+            type="email"
+            value={loginData.email}
+          />
+          <input
+            autoComplete="off"
+            className="password-input"
+            id="password"
+            name="password"
+            onChange={({target}) => handleChange(target)}
+            placeholder="Password"
+            type="password"
+            value={loginData.password}
+          />
+          <button
+            className="login-button"
+            disabled={isDisable}
+            onClick={handleSubmitClick}
+            type="submit"
+          >
+            LOGIN
+          </button>
+        </form>
+      </div>
     </main>
   );
 }
