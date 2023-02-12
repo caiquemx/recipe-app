@@ -3,7 +3,6 @@ import {mealContext} from '../context';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MealCard from '../components/MealCard';
-import '../styles/home.css';
 
 export default function Home() {
   const {categories, meals, functions} = useContext(mealContext);

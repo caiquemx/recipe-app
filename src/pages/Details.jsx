@@ -3,8 +3,6 @@ import {useParams} from 'react-router-dom';
 import DetailsCard from '../components/DetailsCard';
 import {mealContext} from '../context';
 
-import '../styles/details.css';
-
 export default function Details() {
   const {functions} = useContext(mealContext);
   const {id} = useParams();

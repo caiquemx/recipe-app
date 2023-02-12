@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import '../styles/header.css';
 import {mealContext} from '../context';
 
 export default function Header({pageTitle}) {

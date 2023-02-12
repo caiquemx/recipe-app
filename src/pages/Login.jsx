@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import gravatarImg from '../utils/gravatarHash';
 
-import '../styles/login.css';
-
 export default function Login() {
   // consts and states
   const [loginData, setLoginData] = useState({email: '', password: ''});

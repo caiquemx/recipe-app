@@ -1,6 +1,5 @@
 import React from 'react';
 import {useNavigate} from 'react-router';
-import '../styles/meal.css';
 
 export default function MealCard({meals}) {
   const navigate = useNavigate();
