@@ -14,14 +14,13 @@ export default function Home() {
   return (
     <>
       <Header pageTitle={'HOME'} />
-      <div className="home-container">
+      <div>
         {meals && categories ? (
           <>
-            <section className="categories">
-              <div className="categories-container">
+            <section>
+              <div>
                 {categories?.map((e) => (
                   <div
-                    className="category"
                     id={e.id}
                     key={e.strCategory + e.idCategory}
                     onClick={() => handleCategoryClick(e.strCategory)}
@@ -31,8 +30,8 @@ export default function Home() {
                 ))}
               </div>
             </section>
-            <section className="meal">
-              <div className="meal-container">
+            <section>
+              <div>
                 {meals?.map((e) => (
                   <MealCard
                     key={e.name}
