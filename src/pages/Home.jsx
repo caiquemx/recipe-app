@@ -14,33 +14,30 @@ export default function Home() {
   return (
     <>
       <Header pageTitle={'HOME'} />
-      <div>
+      <div className="mt-28">
         {meals && categories ? (
-          <>
-            <section>
-              <div>
-                {categories?.map((e) => (
-                  <div
-                    id={e.id}
-                    key={e.strCategory + e.idCategory}
-                    onClick={() => handleCategoryClick(e.strCategory)}
-                  >
-                    {e.strCategory}
-                  </div>
-                ))}
-              </div>
-            </section>
-            <section>
-              <div>
-                {meals?.map((e) => (
-                  <MealCard
-                    key={e.name}
-                    meals={e}
-                  />
-                ))}
-              </div>
-            </section>
-          </>
+          <section className="flex flex-col">
+            <div className="flex flex-row flex-wrap mb-4">
+              {categories?.map((e) => (
+                <span
+                  id={e.id}
+                  className="m-2 border p-2 bg-blue-100 cursor-pointer hover:bg-white"
+                  key={e.strCategory + e.idCategory}
+                  onClick={() => handleCategoryClick(e.strCategory)}
+                >
+                  {e.strCategory}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap flex-row space-x-2 space-y-4 w-full justify-center items-center">
+              {meals?.map((e) => (
+                <MealCard
+                  key={e.name}
+                  meals={e}
+                />
+              ))}
+            </div>
+          </section>
         ) : (
           <Loading />
         )}

@@ -5,7 +5,7 @@ export default function Header({pageTitle}) {
   const {data} = useContext(mealContext);
 
   return (
-    <header className="fixed bg-blue-400 h-1/6 w-screen flex flex-row items-center justify-around text-center font-mono  tracking-widest shadow-md">
+    <header className="fixed top-0 bg-blue-400 h-1/8 w-screen flex flex-row items-center justify-around text-center font-mono  tracking-widest shadow-md">
       <img
         alt="profile-avatar"
         className="w-1/8 rounded-md"
