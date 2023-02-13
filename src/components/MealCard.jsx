@@ -10,7 +10,7 @@ export default function MealCard({meals}) {
 
   return (
     <div
-      className="flex flex-col w-1/4 border first:mt-4 first:ml-2 hover:-translate-y-2 text-center text-md font-mono tracking-wide"
+      className="flex flex-col w-1/4 border first:mt-4 first:ml-2 hover:-translate-y-2 text-center text-md font-mono tracking-wide shadow-md"
       onClick={() => handleCardClick(meals.id)}
     >
       <img

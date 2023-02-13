@@ -17,11 +17,11 @@ export default function Home() {
       <div className="mt-28">
         {meals && categories ? (
           <section className="flex flex-col">
-            <div className="flex flex-row flex-wrap mb-4">
+            <div className="flex flex-row flex-wrap mb-4 justify-center">
               {categories?.map((e) => (
                 <span
                   id={e.id}
-                  className="m-2 border p-2 bg-blue-100 cursor-pointer hover:bg-white"
+                  className="m-2 border p-2 bg-blue-100 cursor-pointer hover:bg-white shadow-md rounded-sm"
                   key={e.strCategory + e.idCategory}
                   onClick={() => handleCategoryClick(e.strCategory)}
                 >
