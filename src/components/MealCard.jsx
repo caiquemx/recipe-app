@@ -10,14 +10,15 @@ export default function MealCard({meals}) {
 
   return (
     <div
-      className="card-container"
+      className="flex flex-col w-1/4 border first:mt-4 first:ml-2 hover:-translate-y-2 text-center text-md font-mono tracking-wide shadow-md"
       onClick={() => handleCardClick(meals.id)}
     >
       <img
-        src={`${meals.thumb}/preview`}
         alt={`Image of ${meals.name}`}
+        className="w-full"
+        src={`${meals.thumb}/preview`}
       />
-      <p>{meals.name}</p>
+      <p className="truncate ">{meals.name}</p>
     </div>
   );
 }

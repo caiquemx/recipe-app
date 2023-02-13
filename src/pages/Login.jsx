@@ -51,40 +51,44 @@ export default function Login() {
 
   return (
     <main>
-      <div className="form-container">
+      <div className="flex flex-col w-screen items-center justify-center h-screen tracking-wider font-mono bg-gray-100">
         <form
           action="submit"
-          className="form"
+          className="flex flex-col justify-center items-center w-9/12 border rounded-md shadow-xl bg-blue-400"
         >
-          <h1 className="app-title">RECIPES APP</h1>
-          <input
-            autoComplete="off"
-            className="email-input"
-            id="email"
-            name="email"
-            onChange={({target}) => handleChange(target)}
-            placeholder="Email"
-            type="email"
-            value={loginData.email}
-          />
-          <input
-            autoComplete="off"
-            className="password-input"
-            id="password"
-            name="password"
-            onChange={({target}) => handleChange(target)}
-            placeholder="Password"
-            type="password"
-            value={loginData.password}
-          />
-          <button
-            className="login-button"
-            disabled={isDisable}
-            onClick={handleSubmitClick}
-            type="submit"
-          >
-            LOGIN
-          </button>
+          <div className="border bg-white shadow-lg shadow-blue-700 mt-12 mb-12 justify-center items-center flex flex-col w-8/12 m-4 rounded-lg  ">
+            <h1 className="flex items-center font-bold justify-center w-9/12 mt-8 mb-8 bg-blue-200 rounded-md text-3xl h-20 shadow-inner">
+              RECIPES
+            </h1>
+            <input
+              autoComplete="off"
+              className="border border-blue-400 rounded-md p-4 m-4 w-11/12"
+              id="email"
+              name="email"
+              onChange={({target}) => handleChange(target)}
+              placeholder="Email"
+              type="email"
+              value={loginData.email}
+            />
+            <input
+              autoComplete="off"
+              className="border border-blue-400 rounded-md p-4 m-4 w-11/12"
+              id="password"
+              name="password"
+              onChange={({target}) => handleChange(target)}
+              placeholder="Password"
+              type="password"
+              value={loginData.password}
+            />
+            <button
+              className="disabled:  enabled:cursor-pointer enabled: enabled:bg-blue-200 enabled:hover:bg-white tracking-wider rounded-md  enabled:shadow-xl text-xl p-4 m-4 mb-8 mt-8 w-1/2"
+              disabled={isDisable}
+              onClick={handleSubmitClick}
+              type="submit"
+            >
+              LOGIN
+            </button>
+          </div>
         </form>
       </div>
     </main>
