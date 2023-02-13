@@ -18,7 +18,7 @@ export default function MealCard({meals}) {
         className="w-full"
         src={`${meals.thumb}/preview`}
       />
-      <p>{meals.name}</p>
+      <p className="truncate ">{meals.name}</p>
     </div>
   );
 }
